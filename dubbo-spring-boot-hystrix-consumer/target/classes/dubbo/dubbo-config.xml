@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans.xsd
+	   http://code.alibabatech.com/schema/dubbo
+	   http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+	<!-- 服务应用名称 -->
+	<dubbo:application name="consumer">
+		<dubbo:parameter key="qos.enable" value="true"/>
+		<dubbo:parameter key="qos.accept.foreign.ip" value="false"/>
+		<dubbo:parameter key="qos.port" value="33334"/>
+	</dubbo:application>
+	<!-- 使用zookeeper做为注册中心 -->
+	<dubbo:registry  protocol="zookeeper" address="zookeeper://10.20.22.160:2181"/>
+	<!-- 用dubbo协议在20880端口暴露服务，默认：20880 -->
+	<dubbo:protocol name="dubbo" port="20881" />
+
+	<!-- 缺省配置 -->
+	<dubbo:consumer timeout="1800000" retries="0"/>
+	<!--消费的dubbo服务 -->
+	<!--areainfo-->
+	<dubbo:reference interface="org.asiainfo.service.DefaultApiService" id="defaultApiService"/>
+
+
+
+</beans>

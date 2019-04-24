@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dubbo-spring-boot-hystrix.iml" filepath="$PROJECT_DIR$/dubbo-spring-boot-hystrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-spring-boot-hystrix-api/dubbo-spring-boot-hystrix-api.iml" filepath="$PROJECT_DIR$/dubbo-spring-boot-hystrix-api/dubbo-spring-boot-hystrix-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-spring-boot-hystrix-consumer/dubbo-spring-boot-hystrix-consumer.iml" filepath="$PROJECT_DIR$/dubbo-spring-boot-hystrix-consumer/dubbo-spring-boot-hystrix-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-spring-boot-hystrix-provider/dubbo-spring-boot-hystrix-provider.iml" filepath="$PROJECT_DIR$/dubbo-spring-boot-hystrix-provider/dubbo-spring-boot-hystrix-provider.iml" />
+    </modules>
+  </component>
+</project>
